@@ -68,9 +68,11 @@
 #define LCD_PINS_D4                          30   // ST9720 CLK
 
 #if ENABLED(BLTOUCH)
-  #define SERVO0_PIN                         27
+  #define SERVO0_PIN                         29
   #undef BEEPER_PIN
-#elif ENABLED(FILAMENT_RUNOUT_SENSOR)
+#endif
+
+#if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #ifndef FIL_RUNOUT_PIN
     #define FIL_RUNOUT_PIN                   27
   #endif
@@ -123,10 +125,10 @@
   PIN:  23   Port: C7        Y_DIR_PIN                   protected
   PIN:  24   Port: A7        TEMP_0_PIN                  protected
   PIN:  25   Port: A6        TEMP_BED_PIN                protected
-  PIN:  26   Port: A5        Z_ENABLE_PIN                protected
+  PIN:  26   Port: A5        <unused/unknown>            protected
   PIN:  27   Port: A4        BEEPER_PIN                  Output = 0
   PIN:  28   Port: A3        LCD_PINS_RS                 Output = 0
-  PIN:  29   Port: A2        <unused/unknown>            Input  = 0
+  PIN:  29   Port: A2        Z_ENABLE_PIN                Input  = 0
   PIN:  30   Port: A1        LCD_PINS_D4                 Output = 1
   PIN:  31   Port: A0        SDSS                        Output = 1
 */
